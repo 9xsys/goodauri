@@ -25,7 +25,7 @@ export default function BookingCTA({ locale }: { locale: Locale }) {
             href="https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-block rounded-2xl bg-blue-600 px-10 py-5 text-lg font-semibold text-white transition hover:bg-blue-700"
+            className="mt-10 inline-block rounded-2xl bg-sage-600 px-10 py-5 text-lg font-semibold text-white transition hover:bg-sage-700"
           >
             {t("booking.cta")}
           </a>
