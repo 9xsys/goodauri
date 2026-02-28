@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: siteConfig.propertyName + " — Summer in Gudauri",
   description:
-    "A comfortable apartment in Gudauri, Georgia. Cool mountain air, reliable Wi-Fi, and direct access to Caucasus hiking trails. Book your summer stay.",
+    "A comfortable apartment in Gudauri, Georgia. Cool mountain air and direct access to Caucasus hiking trails. Book your summer stay.",
   metadataBase: new URL(siteConfig.siteUrl),
   openGraph: {
     title: siteConfig.propertyName,

@@ -4,15 +4,7 @@ import { createT, getArray } from "@/lib/i18n";
 import type { Locale } from "@/site-config";
 
 const icons = [
-  // 0 — laptop / wifi
-  <svg key="wifi" width={40} height={40} viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth={1.5} className="text-sage-600">
-    <rect x="6" y="12" width="28" height="18" rx="2" />
-    <line x1="6" y1="30" x2="34" y2="30" />
-    <line x1="14" y1="34" x2="26" y2="34" />
-    <path d="M16 22a4 4 0 0 1 8 0" />
-    <circle cx="20" cy="24" r="1" fill="currentColor" stroke="none" />
-  </svg>,
-  // 1 — mountain
+  // 0 — mountain
   <svg key="mountain" width={40} height={40} viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth={1.5} className="text-sage-600">
     <path d="M4 34 L16 10 L22 22 L26 16 L36 34 Z" />
     <path d="M16 10 L20 18" />

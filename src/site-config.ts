@@ -37,8 +37,6 @@ export const siteConfig = {
 
   // ── Amenities (icon keys map to component icons) ─────────
   amenities: [
-    "wifi",
-    "workspace",
     "kitchen",
     "washer",
     "heating",

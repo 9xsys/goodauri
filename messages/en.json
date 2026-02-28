@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Gudauri Mountain Apartment — Summer Rentals",
-    "description": "A comfortable apartment in Gudauri, Georgia. Cool mountain air, reliable Wi-Fi, and direct access to Caucasus hiking trails. Book your summer stay."
+    "description": "A comfortable apartment in Gudauri, Georgia. Cool mountain air and direct access to Caucasus hiking trails. Book your summer stay."
   },
   "nav": {
     "apartment": "Apartment",
@@ -12,7 +12,7 @@
   },
   "hero": {
     "headline": "Your summer base in the Georgian mountains",
-    "subheadline": "Cool air. Mountain trails. Fast internet. A comfortable apartment in Gudauri — away from the heat, closer to what matters.",
+    "subheadline": "Cool air. Mountain trails. A comfortable apartment in Gudauri — away from the heat, closer to what matters.",
     "cta_primary": "Book on Booking.com",
     "cta_secondary": "See the apartment"
   },
@@ -27,12 +27,8 @@
   },
   "why": {
     "title": "Why this place",
-    "subtitle": "Built for focused work and proper rest.",
+    "subtitle": "Built for proper rest and mountain living.",
     "blocks": [
-      {
-        "title": "Reliable workspace",
-        "description": "Dedicated desk, fast fiber internet, and quiet surroundings. Bring your laptop and get things done."
-      },
       {
         "title": "Mountain views",
         "description": "Wake up to the Greater Caucasus range. The apartment faces the mountains — no obstruction, no noise."
@@ -142,10 +138,6 @@
       {
         "q": "What time is check-in and check-out?",
         "a": "Check-in from 14:00, check-out by 11:00. Flexible timing can be arranged if the apartment is free."
-      },
-      {
-        "q": "How fast is the internet?",
-        "a": "Fiber connection, typically 50–100 Mbps down. Stable enough for video calls and large uploads."
       },
       {
         "q": "Is it cold at night in summer?",

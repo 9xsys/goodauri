@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Appartement Gudauri — Location d'été en montagne",
-    "description": "Un appartement confortable à Gudauri, Géorgie. Air frais de montagne, Wi-Fi fiable et accès direct aux sentiers de randonnée du Caucase. Réservez votre séjour d'été."
+    "description": "Un appartement confortable à Gudauri, Géorgie. Air frais de montagne et accès direct aux sentiers de randonnée du Caucase. Réservez votre séjour d'été."
   },
   "nav": {
     "apartment": "Appartement",
@@ -12,7 +12,7 @@
   },
   "hero": {
     "headline": "Votre base d'été dans les montagnes géorgiennes",
-    "subheadline": "Air frais. Sentiers de montagne. Internet rapide. Un appartement confortable à Gudauri — loin de la chaleur, plus près de l'essentiel.",
+    "subheadline": "Air frais. Sentiers de montagne. Un appartement confortable à Gudauri — loin de la chaleur, plus près de l'essentiel.",
     "cta_primary": "Réserver sur Booking.com",
     "cta_secondary": "Voir l'appartement"
   },
@@ -27,12 +27,8 @@
   },
   "why": {
     "title": "Pourquoi cet endroit",
-    "subtitle": "Conçu pour le travail concentré et le vrai repos.",
+    "subtitle": "Conçu pour le vrai repos et la vie en montagne.",
     "blocks": [
-      {
-        "title": "Espace de travail fiable",
-        "description": "Bureau dédié, internet fibre rapide et environnement calme. Apportez votre laptop et travaillez sereinement."
-      },
       {
         "title": "Vue sur les montagnes",
         "description": "Réveillez-vous face au Grand Caucase. L'appartement donne sur les montagnes — sans obstruction, sans bruit."
@@ -142,10 +138,6 @@
       {
         "q": "À quelle heure est l'arrivée et le départ ?",
         "a": "Arrivée à partir de 14h00, départ avant 11h00. Horaires flexibles possibles si l'appartement est libre."
-      },
-      {
-        "q": "Quelle est la vitesse d'internet ?",
-        "a": "Connexion fibre, généralement 50–100 Mbps en descendant. Stable pour les appels vidéo et les gros téléchargements."
       },
       {
         "q": "Fait-il froid la nuit en été ?",
