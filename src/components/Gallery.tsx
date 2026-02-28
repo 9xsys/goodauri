@@ -33,11 +33,61 @@ const galleryPhotos = [
 ];
 
 const COLS = 8;
-const rows = [
-  galleryPhotos.slice(0, COLS),
-  galleryPhotos.slice(COLS, COLS * 2),
-  galleryPhotos.slice(COLS * 2, COLS * 3),
+const rowData = [
+  { photos: galleryPhotos.slice(0, COLS), direction: "left" as const },
+  { photos: galleryPhotos.slice(COLS, COLS * 2), direction: "right" as const },
+  { photos: galleryPhotos.slice(COLS * 2, COLS * 3), direction: "left" as const },
 ];
+
+function MarqueeRow({
+  photos,
+  direction,
+  speed = 30,
+  onPhotoClick,
+  globalOffset,
+}: {
+  photos: typeof galleryPhotos;
+  direction: "left" | "right";
+  speed?: number;
+  onPhotoClick: (index: number) => void;
+  globalOffset: number;
+}) {
+  const duplicated = [...photos, ...photos];
+  const animationName = direction === "left" ? "marquee-left" : "marquee-right";
+
+  return (
+    <div className="overflow-hidden">
+      <div
+        className="flex gap-3 hover:[animation-play-state:paused]"
+        style={{
+          animation: `${animationName} ${speed}s linear infinite`,
+          width: "max-content",
+        }}
+      >
+        {duplicated.map((photo, i) => {
+          const realIndex = globalOffset + (i % photos.length);
+          return (
+            <div
+              key={`${photo.src}-${i}`}
+              className="group cursor-pointer overflow-hidden rounded-xl flex-shrink-0"
+              style={{ width: "200px", height: "200px" }}
+              onClick={() => onPhotoClick(realIndex)}
+            >
+              <div className="relative h-full w-full">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 interface GalleryProps {
   locale: Locale;
@@ -51,7 +101,6 @@ export default function Gallery({ locale }: GalleryProps) {
   const isLightboxOpen = lightboxIndex !== null;
 
   const openLightbox = (index: number) => setLightboxIndex(index);
-
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
 
   const goToPrevious = useCallback(() => {
@@ -84,51 +133,27 @@ export default function Gallery({ locale }: GalleryProps) {
   }, [isLightboxOpen]);
 
   return (
-    <section id="apartment" className="py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="apartment" className="py-24 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 mb-12">
         <h2 className="font-display text-4xl font-semibold text-stone-900">
           {t("gallery.title")}
         </h2>
         <p className="mt-3 max-w-2xl text-lg text-stone-500">
           {t("gallery.subtitle")}
         </p>
+      </div>
 
-        <div className="mt-12 flex flex-col gap-3">
-          {rows.map((row, rowIndex) => {
-            const isReversed = rowIndex === 1;
-            return (
-              <div key={rowIndex} className="grid grid-cols-4 gap-3 md:grid-cols-8">
-                {row.map((photo, colIndex) => {
-                  const globalIndex = rowIndex * COLS + colIndex;
-                  const delay = isReversed
-                    ? (row.length - 1 - colIndex) * 0.06
-                    : colIndex * 0.06;
-
-                  return (
-                    <motion.div
-                      key={photo.src}
-                      initial={{ opacity: 0, x: isReversed ? 40 : -40 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.5, delay }}
-                      className="group cursor-pointer overflow-hidden rounded-xl aspect-square"
-                      onClick={() => openLightbox(globalIndex)}
-                    >
-                      <div className="relative h-full w-full">
-                        <img
-                          src={photo.src}
-                          alt={photo.alt}
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+      <div className="flex flex-col gap-3">
+        {rowData.map((row, rowIndex) => (
+          <MarqueeRow
+            key={rowIndex}
+            photos={row.photos}
+            direction={row.direction}
+            speed={35}
+            onPhotoClick={openLightbox}
+            globalOffset={rowIndex * COLS}
+          />
+        ))}
       </div>
 
       {/* Lightbox */}
