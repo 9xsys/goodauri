@@ -1,8 +1,7 @@
 export const siteConfig = {
   // ── Property details ─────────────────────────────────────
-  propertyName: "Gudauri Mountain Apartment",
-  // TODO: Replace with your actual tagline
-  shortTagline: "A quiet base for summer in the Caucasus",
+  propertyName: "Goodauri Mountain Apartment",
+  shortTagline: "A cosy apartment in the Georgian mountains",
   maxGuests: 4,
   bedrooms: 1,
   beds: 1,
@@ -50,7 +49,7 @@ export const siteConfig = {
   ] as const,
 
   // ── SEO ──────────────────────────────────────────────────
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://gudauri-apartment.vercel.app",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://goodauri.com",
   ogImagePath: "/photos/og-image.jpg",
 
   // ── Supported locales ────────────────────────────────────

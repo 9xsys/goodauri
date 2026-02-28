@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/site-config";
+import JsonLd from "@/components/JsonLd";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -16,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.propertyName + " — Summer in Gudauri",
+  title: siteConfig.propertyName + " — Gudauri, Georgia",
   description:
-    "A comfortable apartment in Gudauri, Georgia. Cool mountain air and direct access to Caucasus hiking trails. Book your summer stay.",
+    "A cosy apartment in Gudauri, Georgia. Cool mountain air and direct access to Caucasus hiking trails. Book your stay.",
   metadataBase: new URL(siteConfig.siteUrl),
   openGraph: {
     title: siteConfig.propertyName,
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImagePath,
         width: 1200,
         height: 630,
-        alt: "Gudauri Mountain Apartment",
+        alt: "Goodauri Mountain Apartment",
       },
     ],
     locale: "en_US",
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-stone-50 text-stone-800 antialiased">
+        <JsonLd />
         {children}
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Locale } from "@/site-config";
 import { siteConfig } from "@/site-config";
 import Navbar from "@/components/Navbar";
@@ -15,8 +15,14 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 
+const localeMap: Record<Locale, string> = { en: "en", fr: "fr", ka: "ka" };
+
 export default function Home() {
   const [locale, setLocale] = useState<Locale>(siteConfig.defaultLocale);
+
+  useEffect(() => {
+    document.documentElement.lang = localeMap[locale];
+  }, [locale]);
 
   return (
     <>
