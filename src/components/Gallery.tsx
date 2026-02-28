@@ -4,7 +4,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createT } from "@/lib/i18n";
 import type { Locale } from "@/site-config";
-import { cn } from "@/lib/utils";
 
 const galleryPhotos = [
   { src: "/photos/gallery-16.jpg", alt: "Bedroom with bed, balcony and mountain view" },
@@ -27,6 +26,17 @@ const galleryPhotos = [
   { src: "/photos/gallery-5.jpg", alt: "Balcony view" },
   { src: "/photos/gallery-4.jpg", alt: "Interior detail" },
   { src: "/photos/gallery-23.jpg", alt: "Plants and dining area overview" },
+  { src: "/photos/gallery-6.jpg", alt: "Apartment detail" },
+  { src: "/photos/gallery-7.jpg", alt: "Apartment detail" },
+  { src: "/photos/gallery-8.jpg", alt: "Apartment detail" },
+  { src: "/photos/gallery-12.jpg", alt: "Apartment detail" },
+];
+
+const COLS = 8;
+const rows = [
+  galleryPhotos.slice(0, COLS),
+  galleryPhotos.slice(COLS, COLS * 2),
+  galleryPhotos.slice(COLS * 2, COLS * 3),
 ];
 
 interface GalleryProps {
@@ -40,13 +50,9 @@ export default function Gallery({ locale }: GalleryProps) {
 
   const isLightboxOpen = lightboxIndex !== null;
 
-  const openLightbox = (index: number) => {
-    setLightboxIndex(index);
-  };
+  const openLightbox = (index: number) => setLightboxIndex(index);
 
-  const closeLightbox = useCallback(() => {
-    setLightboxIndex(null);
-  }, []);
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
 
   const goToPrevious = useCallback(() => {
     setLightboxIndex((prev) =>
@@ -60,21 +66,17 @@ export default function Gallery({ locale }: GalleryProps) {
     );
   }, []);
 
-  // Keyboard navigation
   useEffect(() => {
     if (!isLightboxOpen) return;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeLightbox();
       if (e.key === "ArrowLeft") goToPrevious();
       if (e.key === "ArrowRight") goToNext();
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isLightboxOpen, closeLightbox, goToPrevious, goToNext]);
 
-  // Auto-focus close button when lightbox opens
   useEffect(() => {
     if (isLightboxOpen && closeButtonRef.current) {
       closeButtonRef.current.focus();
@@ -91,32 +93,41 @@ export default function Gallery({ locale }: GalleryProps) {
           {t("gallery.subtitle")}
         </p>
 
-        {/* Photo grid */}
-        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-          {galleryPhotos.map((photo, index) => (
-            <motion.div
-              key={photo.src}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className={cn(
-                "group cursor-pointer overflow-hidden rounded-2xl",
-                index === 0 ? "col-span-2 row-span-2 aspect-auto" : "aspect-square"
-              )}
-              onClick={() => openLightbox(index)}
-            >
-              <div className="relative h-full w-full">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+        <div className="mt-12 flex flex-col gap-3">
+          {rows.map((row, rowIndex) => {
+            const isReversed = rowIndex === 1;
+            return (
+              <div key={rowIndex} className="grid grid-cols-4 gap-3 md:grid-cols-8">
+                {row.map((photo, colIndex) => {
+                  const globalIndex = rowIndex * COLS + colIndex;
+                  const delay = isReversed
+                    ? (row.length - 1 - colIndex) * 0.06
+                    : colIndex * 0.06;
+
+                  return (
+                    <motion.div
+                      key={photo.src}
+                      initial={{ opacity: 0, x: isReversed ? 40 : -40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, delay }}
+                      className="group cursor-pointer overflow-hidden rounded-xl aspect-square"
+                      onClick={() => openLightbox(globalIndex)}
+                    >
+                      <div className="relative h-full w-full">
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -131,81 +142,40 @@ export default function Gallery({ locale }: GalleryProps) {
             className="lightbox-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/90"
             role="dialog"
             aria-modal="true"
-            aria-label={t("gallery.lightbox_label")}
             onClick={closeLightbox}
           >
-            {/* Close button */}
             <button
               ref={closeButtonRef}
               onClick={closeLightbox}
               className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
               aria-label={t("gallery.close")}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
 
-            {/* Previous arrow */}
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                goToPrevious();
-              }}
+              onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
               className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
               aria-label={t("gallery.previous")}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
             </button>
 
-            {/* Next arrow */}
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                goToNext();
-              }}
+              onClick={(e) => { e.stopPropagation(); goToNext(); }}
               className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
               aria-label={t("gallery.next")}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </button>
 
-            {/* Current image */}
             <motion.img
               key={lightboxIndex}
               src={galleryPhotos[lightboxIndex].src}
@@ -217,7 +187,6 @@ export default function Gallery({ locale }: GalleryProps) {
               onClick={(e) => e.stopPropagation()}
             />
 
-            {/* Counter */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-white/70">
               {t("gallery.photo_of", {
                 current: lightboxIndex + 1,
