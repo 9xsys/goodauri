@@ -154,10 +154,6 @@
       {
         "q": "Y a-t-il un parking ?",
         "a": "Oui, parking gratuit disponible devant le bâtiment. Pas de réservation nécessaire."
-      },
-      {
-        "q": "Puis-je amener un animal ?",
-        "a": "Demandez à l'avance. Les petits animaux calmes peuvent être acceptés selon les dates."
       }
     ]
   },

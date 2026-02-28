@@ -154,10 +154,6 @@
       {
         "q": "Is parking available?",
         "a": "Yes, free parking is available right at the building. No reservation needed."
-      },
-      {
-        "q": "Can I bring a pet?",
-        "a": "Please ask in advance. Small, well-behaved pets may be welcome depending on the dates."
       }
     ]
   },
