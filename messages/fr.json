@@ -13,7 +13,7 @@
   "hero": {
     "headline": "Votre base d'été dans les montagnes géorgiennes",
     "subheadline": "Air frais. Sentiers de montagne. Internet rapide. Un appartement confortable à Gudauri — loin de la chaleur, plus près de l'essentiel.",
-    "cta_primary": "Voir les disponibilités",
+    "cta_primary": "Réserver sur Booking.com",
     "cta_secondary": "Voir l'appartement"
   },
   "gallery": {
@@ -122,17 +122,17 @@
     "placeholder_1": {
       "text": "Très bel endroit où séjourner. Quartier agréable, proche de tout avec beaucoup d'activités.",
       "author": "— Ahmed",
-      "source": "Airbnb"
+      "source": "Booking.com"
     },
     "placeholder_2": {
       "text": "L'appartement est très propre et l'endroit est très agréable. L'hôte est super.",
       "author": "— Saled",
-      "source": "Airbnb"
+      "source": "Booking.com"
     },
     "placeholder_3": {
       "text": "Bon emplacement. Très proche du téléski.",
       "author": "— Ольга",
-      "source": "Airbnb"
+      "source": "Booking.com"
     }
   },
   "faq": {

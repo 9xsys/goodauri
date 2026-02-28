@@ -35,7 +35,7 @@ export default function Reviews({ locale }: { locale: Locale }) {
                 {t(`reviews.${key}.text`)}
               </p>
               <p className="text-stone-500 mt-6 text-sm">
-                {t(`reviews.${key}.author`)}
+                {t(`reviews.${key}.author`)} · {t(`reviews.${key}.source`)}
               </p>
             </motion.div>
           ))}

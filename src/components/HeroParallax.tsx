@@ -68,7 +68,9 @@ export default function HeroParallax({ locale }: HeroParallaxProps) {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           {/* Primary CTA */}
           <a
-            href="#availability"
+            href="https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-2xl bg-white px-8 py-4 font-semibold text-stone-900 transition hover:bg-stone-100"
           >
             {t("hero.cta_primary")}
