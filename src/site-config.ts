@@ -23,7 +23,7 @@ export const siteConfig = {
   // ── Contact ──────────────────────────────────────────────
   email: "booking@example.com", // TODO: Replace with real email
   // Include country code. Leave empty string to hide button.
-  whatsapp: "+995XXXXXXXXX", // TODO: Replace
+  whatsapp: "+995599002879",
   telegram: "your_telegram", // TODO: Replace (username without @)
 
   // ── Location ─────────────────────────────────────────────

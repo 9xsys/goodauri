@@ -21,14 +21,24 @@ export default function BookingCTA({ locale }: { locale: Locale }) {
           <p className="text-lg text-stone-500 mt-3">
             {t("booking.subtitle")}
           </p>
-          <a
-            href="https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-block rounded-2xl bg-sage-600 px-10 py-5 text-lg font-semibold text-white transition hover:bg-sage-700"
-          >
-            {t("booking.cta")}
-          </a>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl bg-sage-600 px-10 py-5 text-lg font-semibold text-white transition hover:bg-sage-700"
+            >
+              {t("booking.cta")}
+            </a>
+            <a
+              href="https://wa.me/995599002879"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl bg-sage-600 px-10 py-5 text-lg font-semibold text-white transition hover:bg-sage-700"
+            >
+              WhatsApp
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
