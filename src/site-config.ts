@@ -31,7 +31,7 @@ export const siteConfig = {
     lng: 44.4900456,
   },
   mapEmbedUrl:
-    "https://maps.google.com/maps?q=Darina%27s+Goodauri+apartment&z=15&output=embed",
+    "https://maps.google.com/maps?q=42.4682331,44.4900456&z=16&output=embed",
   mapLink: "https://maps.app.goo.gl/gzAKxbgqnA4Tvg5P8",
 
   // ── Amenities (icon keys map to component icons) ─────────

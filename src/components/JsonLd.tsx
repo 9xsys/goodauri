@@ -29,6 +29,11 @@ export default function JsonLd() {
       "@type": "LocationFeatureSpecification",
       name: a,
     })),
+    sameAs: [
+      "https://www.instagram.com/goodauri_/",
+      "https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html",
+      "https://maps.app.goo.gl/gzAKxbgqnA4Tvg5P8",
+    ],
     potentialAction: {
       "@type": "ReserveAction",
       target: "https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html",

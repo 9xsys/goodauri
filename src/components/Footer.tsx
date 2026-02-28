@@ -44,6 +44,17 @@ export default function Footer({
               {siteConfig.shortTagline}
             </p>
 
+            <p className="text-sm mt-3">
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                Gudauri, Georgia
+              </a>
+            </p>
+
             <div className="mt-4 flex flex-col gap-1">
               <a
                 href={`mailto:${siteConfig.email}`}
@@ -71,6 +82,36 @@ export default function Footer({
                   Telegram: @{siteConfig.telegram}
                 </a>
               )}
+            </div>
+
+            <div className="mt-4 flex gap-4">
+              <a
+                href="https://www.instagram.com/goodauri_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition"
+                aria-label="Instagram"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.booking.com/hotel/ge/goodauri-cosy-appartment.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition"
+                aria-label="Booking.com"
+              >
+                Booking.com
+              </a>
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition"
+                aria-label="Google Maps"
+              >
+                Google Maps
+              </a>
             </div>
           </div>
 
