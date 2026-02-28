@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "Gudauri Mountain Apartment — Summer Rentals",
+    "description": "A comfortable apartment in Gudauri, Georgia. Cool mountain air, reliable Wi-Fi, and direct access to Caucasus hiking trails. Book your summer stay."
+  },
+  "nav": {
+    "apartment": "Apartment",
+    "availability": "Availability",
+    "location": "Location",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Your summer base in the Georgian mountains",
+    "subheadline": "Cool air. Mountain trails. Fast internet. A comfortable apartment in Gudauri — away from the heat, closer to what matters.",
+    "cta_primary": "Check availability",
+    "cta_secondary": "See the apartment"
+  },
+  "gallery": {
+    "title": "The space",
+    "subtitle": "A clean, comfortable apartment with everything you need to work and unwind.",
+    "view_all": "View all photos",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "photo_of": "Photo {current} of {total}"
+  },
+  "why": {
+    "title": "Why this place",
+    "subtitle": "Built for focused work and proper rest.",
+    "blocks": [
+      {
+        "title": "Reliable workspace",
+        "description": "Dedicated desk, fast fiber internet, and quiet surroundings. Bring your laptop and get things done."
+      },
+      {
+        "title": "Mountain views",
+        "description": "Wake up to the Greater Caucasus range. The apartment faces the mountains — no obstruction, no noise."
+      },
+      {
+        "title": "Summer trails",
+        "description": "Step outside and you're minutes from alpine meadows, ridge hikes, and unmarked paths. No car needed for day trips."
+      },
+      {
+        "title": "Cooler than the city",
+        "description": "At 2,200 m elevation, Gudauri stays 10–15°C cooler than Tbilisi all summer. Sleep with the windows open."
+      },
+      {
+        "title": "Easy access",
+        "description": "Two hours from Tbilisi on the Georgian Military Highway. Regular marshrutkas or a simple drive through the mountains."
+      }
+    ]
+  },
+  "amenities": {
+    "title": "Amenities",
+    "wifi": "High-speed Wi-Fi",
+    "workspace": "Dedicated workspace",
+    "kitchen": "Full kitchen",
+    "washer": "Washing machine",
+    "heating": "Central heating",
+    "hotWater": "Hot water 24/7",
+    "parking": "Free parking",
+    "mountainView": "Mountain view",
+    "balcony": "Balcony",
+    "tv": "Smart TV",
+    "elevator": "Elevator",
+    "airConditioning": "Air conditioning"
+  },
+  "booking": {
+    "title": "Check availability",
+    "subtitle": "Select your dates and send a booking request. No payment now — just a request.",
+    "check_in": "Check-in",
+    "check_out": "Check-out",
+    "guests": "Guests",
+    "guest": "guest",
+    "guests_plural": "guests",
+    "nights": "nights",
+    "night": "night",
+    "min_nights": "Minimum stay: {min} nights",
+    "total": "Total",
+    "per_night": "/ night",
+    "name": "Full name",
+    "email": "Email",
+    "message": "Message (optional)",
+    "submit": "Request booking",
+    "submitting": "Sending...",
+    "select_dates": "Select check-in and check-out dates",
+    "date_blocked": "These dates are not available",
+    "too_short": "Minimum stay is {min} nights",
+    "success_title": "Request sent",
+    "success_message": "Thank you. We'll confirm your booking within {hours} hours. Check your email for updates.",
+    "error_title": "Something went wrong",
+    "error_message": "Your request could not be sent. Please try the direct contact options below.",
+    "or_contact": "Or reach out directly",
+    "email_fallback": "Send email",
+    "calendar": {
+      "available": "Available",
+      "blocked": "Blocked",
+      "selected": "Selected",
+      "today": "Today",
+      "prev_month": "Previous month",
+      "next_month": "Next month"
+    },
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "weekdays_short": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
+  },
+  "location": {
+    "title": "Getting there",
+    "subtitle": "Gudauri sits on the Georgian Military Highway, one of the most scenic routes in the Caucasus.",
+    "from_tbilisi": "From Tbilisi",
+    "from_tbilisi_detail": "2 hours by car (120 km) on a well-paved highway. Marshrutkas (minibuses) depart from Didube station daily.",
+    "from_airport": "From Tbilisi Airport",
+    "from_airport_detail": "2.5 hours by car. We can help arrange a transfer.",
+    "altitude": "Altitude",
+    "altitude_detail": "2,200 m above sea level. Summer temperatures: 15–25°C during the day.",
+    "groceries": "Groceries",
+    "groceries_detail": "Small shops in the village. For a full stock-up, stop in Gudauri or Stepantsminda on the way."
+  },
+  "reviews": {
+    "title": "What guests say",
+    "subtitle": "Reviews from previous stays.",
+    "placeholder_1": {
+      "text": "Really nice place to stay in. Nice neighborhood, near to everything and a lot of activities.",
+      "author": "— Ahmed",
+      "source": "Airbnb"
+    },
+    "placeholder_2": {
+      "text": "The apartment is very clean and the place is very nice. The host is great.",
+      "author": "— Saled",
+      "source": "Airbnb"
+    },
+    "placeholder_3": {
+      "text": "Good location. Very close to the ski lift.",
+      "author": "— Ольга",
+      "source": "Airbnb"
+    }
+  },
+  "faq": {
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "What time is check-in and check-out?",
+        "a": "Check-in from 14:00, check-out by 11:00. Flexible timing can be arranged if the apartment is free."
+      },
+      {
+        "q": "How fast is the internet?",
+        "a": "Fiber connection, typically 50–100 Mbps down. Stable enough for video calls and large uploads."
+      },
+      {
+        "q": "Is it cold at night in summer?",
+        "a": "Evenings drop to 8–12°C. The apartment has central heating and extra blankets. Bring a light jacket for outside."
+      },
+      {
+        "q": "Where can I buy groceries?",
+        "a": "There are small shops in Gudauri village. For a bigger selection, stop at a supermarket in Pasanauri or Tbilisi on the way up."
+      },
+      {
+        "q": "How do I get the keys?",
+        "a": "We use a key lockbox for self check-in. You'll receive the code and detailed instructions by email before arrival."
+      },
+      {
+        "q": "Is parking available?",
+        "a": "Yes, free parking is available right at the building. No reservation needed."
+      },
+      {
+        "q": "Can I bring a pet?",
+        "a": "Please ask in advance. Small, well-behaved pets may be welcome depending on the dates."
+      }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "built_with": "Direct booking — no platform fees"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "Email"
+  }
+}

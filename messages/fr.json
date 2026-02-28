@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "Appartement Gudauri — Location d'été en montagne",
+    "description": "Un appartement confortable à Gudauri, Géorgie. Air frais de montagne, Wi-Fi fiable et accès direct aux sentiers de randonnée du Caucase. Réservez votre séjour d'été."
+  },
+  "nav": {
+    "apartment": "Appartement",
+    "availability": "Disponibilité",
+    "location": "Accès",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Votre base d'été dans les montagnes géorgiennes",
+    "subheadline": "Air frais. Sentiers de montagne. Internet rapide. Un appartement confortable à Gudauri — loin de la chaleur, plus près de l'essentiel.",
+    "cta_primary": "Voir les disponibilités",
+    "cta_secondary": "Voir l'appartement"
+  },
+  "gallery": {
+    "title": "L'espace",
+    "subtitle": "Un appartement propre et confortable avec tout le nécessaire pour travailler et se détendre.",
+    "view_all": "Voir toutes les photos",
+    "close": "Fermer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "photo_of": "Photo {current} sur {total}"
+  },
+  "why": {
+    "title": "Pourquoi cet endroit",
+    "subtitle": "Conçu pour le travail concentré et le vrai repos.",
+    "blocks": [
+      {
+        "title": "Espace de travail fiable",
+        "description": "Bureau dédié, internet fibre rapide et environnement calme. Apportez votre laptop et travaillez sereinement."
+      },
+      {
+        "title": "Vue sur les montagnes",
+        "description": "Réveillez-vous face au Grand Caucase. L'appartement donne sur les montagnes — sans obstruction, sans bruit."
+      },
+      {
+        "title": "Randonnées d'été",
+        "description": "Sortez et vous êtes à quelques minutes des prairies alpines, des crêtes et des sentiers sauvages. Pas besoin de voiture."
+      },
+      {
+        "title": "Plus frais que la ville",
+        "description": "À 2 200 m d'altitude, Gudauri reste 10–15°C plus frais que Tbilissi tout l'été. Dormez fenêtres ouvertes."
+      },
+      {
+        "title": "Accès facile",
+        "description": "Deux heures de Tbilissi par la Route Militaire géorgienne. Marshrutkas quotidiennes ou trajet simple en voiture."
+      }
+    ]
+  },
+  "amenities": {
+    "title": "Équipements",
+    "wifi": "Wi-Fi haut débit",
+    "workspace": "Espace de travail",
+    "kitchen": "Cuisine équipée",
+    "washer": "Machine à laver",
+    "heating": "Chauffage central",
+    "hotWater": "Eau chaude 24h/24",
+    "parking": "Parking gratuit",
+    "mountainView": "Vue montagne",
+    "balcony": "Balcon",
+    "tv": "Smart TV",
+    "elevator": "Ascenseur",
+    "airConditioning": "Climatisation"
+  },
+  "booking": {
+    "title": "Vérifier la disponibilité",
+    "subtitle": "Sélectionnez vos dates et envoyez une demande de réservation. Pas de paiement maintenant — juste une demande.",
+    "check_in": "Arrivée",
+    "check_out": "Départ",
+    "guests": "Voyageurs",
+    "guest": "voyageur",
+    "guests_plural": "voyageurs",
+    "nights": "nuits",
+    "night": "nuit",
+    "min_nights": "Séjour minimum : {min} nuits",
+    "total": "Total",
+    "per_night": "/ nuit",
+    "name": "Nom complet",
+    "email": "Email",
+    "message": "Message (optionnel)",
+    "submit": "Demander la réservation",
+    "submitting": "Envoi...",
+    "select_dates": "Sélectionnez les dates d'arrivée et de départ",
+    "date_blocked": "Ces dates ne sont pas disponibles",
+    "too_short": "Le séjour minimum est de {min} nuits",
+    "success_title": "Demande envoyée",
+    "success_message": "Merci. Nous confirmerons votre réservation sous {hours} heures. Vérifiez votre email.",
+    "error_title": "Une erreur est survenue",
+    "error_message": "Votre demande n'a pas pu être envoyée. Essayez les options de contact ci-dessous.",
+    "or_contact": "Ou contactez-nous directement",
+    "email_fallback": "Envoyer un email",
+    "calendar": {
+      "available": "Disponible",
+      "blocked": "Bloqué",
+      "selected": "Sélectionné",
+      "today": "Aujourd'hui",
+      "prev_month": "Mois précédent",
+      "next_month": "Mois suivant"
+    },
+    "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    "weekdays_short": ["Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"]
+  },
+  "location": {
+    "title": "Comment venir",
+    "subtitle": "Gudauri est situé sur la Route Militaire géorgienne, l'un des itinéraires les plus spectaculaires du Caucase.",
+    "from_tbilisi": "Depuis Tbilissi",
+    "from_tbilisi_detail": "2 heures en voiture (120 km) sur une route bien goudronnée. Des marshrutkas partent quotidiennement de la station Didube.",
+    "from_airport": "Depuis l'aéroport de Tbilissi",
+    "from_airport_detail": "2h30 en voiture. Nous pouvons organiser un transfert.",
+    "altitude": "Altitude",
+    "altitude_detail": "2 200 m au-dessus du niveau de la mer. Températures estivales : 15–25°C en journée.",
+    "groceries": "Courses",
+    "groceries_detail": "Petits commerces au village. Pour un approvisionnement complet, arrêtez-vous à Gudauri ou Stepantsminda en chemin."
+  },
+  "reviews": {
+    "title": "Ce que disent les voyageurs",
+    "subtitle": "Avis de séjours précédents.",
+    "placeholder_1": {
+      "text": "Très bel endroit où séjourner. Quartier agréable, proche de tout avec beaucoup d'activités.",
+      "author": "— Ahmed",
+      "source": "Airbnb"
+    },
+    "placeholder_2": {
+      "text": "L'appartement est très propre et l'endroit est très agréable. L'hôte est super.",
+      "author": "— Saled",
+      "source": "Airbnb"
+    },
+    "placeholder_3": {
+      "text": "Bon emplacement. Très proche du téléski.",
+      "author": "— Ольга",
+      "source": "Airbnb"
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "À quelle heure est l'arrivée et le départ ?",
+        "a": "Arrivée à partir de 14h00, départ avant 11h00. Horaires flexibles possibles si l'appartement est libre."
+      },
+      {
+        "q": "Quelle est la vitesse d'internet ?",
+        "a": "Connexion fibre, généralement 50–100 Mbps en descendant. Stable pour les appels vidéo et les gros téléchargements."
+      },
+      {
+        "q": "Fait-il froid la nuit en été ?",
+        "a": "Les soirées descendent à 8–12°C. L'appartement a le chauffage central et des couvertures supplémentaires. Prenez une veste légère."
+      },
+      {
+        "q": "Où acheter des courses ?",
+        "a": "Il y a des petits commerces dans le village de Gudauri. Pour un plus grand choix, arrêtez-vous à Pasanauri ou Tbilissi en montant."
+      },
+      {
+        "q": "Comment récupérer les clés ?",
+        "a": "Nous utilisons une boîte à clés pour l'arrivée autonome. Vous recevrez le code et les instructions par email avant votre arrivée."
+      },
+      {
+        "q": "Y a-t-il un parking ?",
+        "a": "Oui, parking gratuit disponible devant le bâtiment. Pas de réservation nécessaire."
+      },
+      {
+        "q": "Puis-je amener un animal ?",
+        "a": "Demandez à l'avance. Les petits animaux calmes peuvent être acceptés selon les dates."
+      }
+    ]
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "built_with": "Réservation directe — sans frais de plateforme"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "Email"
+  }
+}
