@@ -36,3 +36,5 @@ next-env.d.ts
 
 # booking requests (dev mode)
 /booking-requests/
+
+.vercel
