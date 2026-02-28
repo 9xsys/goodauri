@@ -27,12 +27,12 @@ export const siteConfig = {
 
   // ── Location ─────────────────────────────────────────────
   coordinates: {
-    lat: 42.4578,
-    lng: 44.4733,
+    lat: 42.4682331,
+    lng: 44.4900456,
   },
-  // TODO: Replace with your exact Google Maps embed URL or leave as-is
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11876.476896898773!2d44.46!3d42.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440d1e1b24ef01%3A0x8e7badf1e4fdb591!2sGudauri!5e0!3m2!1sen!2sge!4v1700000000000",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0!2d44.4900456!3d42.4682331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044f9db204ff40d%3A0x10ca0aa8303dffe8!2sDarina&#39;s%20Goodauri%20apartment!5e0!3m2!1sen!2sge",
+  mapLink: "https://maps.app.goo.gl/gzAKxbgqnA4Tvg5P8",
 
   // ── Amenities (icon keys map to component icons) ─────────
   amenities: [
