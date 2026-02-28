@@ -67,8 +67,9 @@
     "airConditioning": "Climatisation"
   },
   "booking": {
-    "title": "Vérifier la disponibilité",
-    "subtitle": "Sélectionnez vos dates et envoyez une demande de réservation. Pas de paiement maintenant — juste une demande.",
+    "title": "Prêt à réserver ?",
+    "subtitle": "Vérifiez les disponibilités et réservez votre séjour sur Booking.com — sécurisé, simple et confirmation instantanée.",
+    "cta": "Réserver sur Booking.com",
     "check_in": "Arrivée",
     "check_out": "Départ",
     "guests": "Voyageurs",

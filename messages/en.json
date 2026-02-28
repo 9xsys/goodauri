@@ -67,8 +67,9 @@
     "airConditioning": "Air conditioning"
   },
   "booking": {
-    "title": "Check availability",
-    "subtitle": "Select your dates and send a booking request. No payment now — just a request.",
+    "title": "Ready to book?",
+    "subtitle": "Check availability and reserve your stay on Booking.com — secure, simple, and instant confirmation.",
+    "cta": "Book now on Booking.com",
     "check_in": "Check-in",
     "check_out": "Check-out",
     "guests": "Guests",

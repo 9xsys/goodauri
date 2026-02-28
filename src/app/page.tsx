@@ -8,7 +8,7 @@ import HeroParallax from "@/components/HeroParallax";
 import Gallery from "@/components/Gallery";
 import WhyThisPlace from "@/components/WhyThisPlace";
 import Amenities from "@/components/Amenities";
-import BookingForm from "@/components/BookingForm";
+import BookingCTA from "@/components/BookingCTA";
 import LocationMap from "@/components/LocationMap";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
@@ -26,7 +26,7 @@ export default function Home() {
         <Gallery locale={locale} />
         <WhyThisPlace locale={locale} />
         <Amenities locale={locale} />
-        <BookingForm locale={locale} />
+        <BookingCTA locale={locale} />
         <LocationMap locale={locale} />
         <Reviews locale={locale} />
         <FAQ locale={locale} />
