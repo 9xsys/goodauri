@@ -31,7 +31,7 @@ export const siteConfig = {
     lng: 44.4900456,
   },
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969!2d44.4900456!3d42.4682331!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x4044f9db204ff40d%3A0x10ca0aa8303dffe8!5e0!3m2!1sen!2sge",
+    "https://maps.google.com/maps?q=42.4682331,44.4900456&z=15&output=embed",
   mapLink: "https://maps.app.goo.gl/gzAKxbgqnA4Tvg5P8",
 
   // ── Amenities (icon keys map to component icons) ─────────
