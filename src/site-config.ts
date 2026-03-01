@@ -20,10 +20,9 @@ export const siteConfig = {
   currency: "USD",
 
   // ── Contact ──────────────────────────────────────────────
-  email: "booking@example.com", // TODO: Replace with real email
-  // Include country code. Leave empty string to hide button.
+  email: "" as string,
   whatsapp: "+995599002879",
-  telegram: "your_telegram", // TODO: Replace (username without @)
+  telegram: "" as string,
 
   // ── Location ─────────────────────────────────────────────
   coordinates: {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { createT } from "@/lib/i18n";
 import type { Locale } from "@/site-config";
@@ -74,9 +75,12 @@ function MarqueeRow({
               onClick={() => onPhotoClick(realIndex)}
             >
               <div className="relative h-full w-full">
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
+                  width={200}
+                  height={200}
+                  sizes="200px"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />

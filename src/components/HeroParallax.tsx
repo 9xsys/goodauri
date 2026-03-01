@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { createT } from "@/lib/i18n";
 import type { Locale } from "@/site-config";
@@ -36,16 +37,23 @@ export default function HeroParallax({ locale }: HeroParallaxProps) {
       className="relative min-h-screen overflow-hidden"
     >
       {/* Parallax background image */}
-      <img
-        src="/photos/hero-mountains.jpg"
-        alt="Gudauri mountains panoramic view"
-        className="absolute inset-0 h-[120%] w-full object-cover"
+      <div
+        className="absolute inset-0 h-[120%] w-full"
         style={{
           top: "-10%",
           transform: `translateY(${offsetY}px)`,
           willChange: "transform",
         }}
-      />
+      >
+        <Image
+          src="/photos/hero-mountains.jpg"
+          alt="Gudauri mountains panoramic view"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
 
       {/* Dark overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />

@@ -56,12 +56,14 @@ export default function Footer({
             </p>
 
             <div className="mt-4 flex flex-col gap-1">
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-sm hover:text-white transition"
-              >
-                {siteConfig.email}
-              </a>
+              {siteConfig.email && (
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-sm hover:text-white transition"
+                >
+                  {siteConfig.email}
+                </a>
+              )}
               {whatsappValid && (
                 <a
                   href={`https://wa.me/${siteConfig.whatsapp.replace(/\+/g, "")}`}
@@ -141,14 +143,6 @@ export default function Footer({
               &copy; {year} {siteConfig.propertyName}. {t("footer.rights")}
             </p>
             <p className="text-sm text-stone-500">{t("footer.built_with")}</p>
-            <div className="flex gap-4">
-              <a href="#" className="text-sm hover:text-white transition">
-                {t("footer.legal")}
-              </a>
-              <a href="#" className="text-sm hover:text-white transition">
-                {t("footer.privacy")}
-              </a>
-            </div>
           </div>
         </div>
       </div>
