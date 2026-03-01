@@ -1,16 +1,9 @@
-"use client";
-
+import Link from "next/link";
 import { createT } from "@/lib/i18n";
 import type { Locale } from "@/site-config";
 import { siteConfig } from "@/site-config";
 
-export default function Footer({
-  locale,
-  onLocaleChange,
-}: {
-  locale: Locale;
-  onLocaleChange: (l: Locale) => void;
-}) {
+export default function Footer({ locale }: { locale: Locale }) {
   const t = createT(locale);
   const year = new Date().getFullYear();
 
@@ -120,9 +113,9 @@ export default function Footer({
           {/* Right — language switcher */}
           <div className="flex gap-1">
             {siteConfig.locales.map((loc) => (
-              <button
+              <Link
                 key={loc}
-                onClick={() => onLocaleChange(loc)}
+                href={`/${loc}`}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   locale === loc
                     ? "bg-stone-700 text-white"
@@ -130,7 +123,7 @@ export default function Footer({
                 }`}
               >
                 {localeLabels[loc] ?? loc.toUpperCase()}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

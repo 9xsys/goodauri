@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { createT } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -9,7 +10,6 @@ import type { Locale } from "@/site-config";
 
 interface NavbarProps {
   locale: Locale;
-  onLocaleChange: (l: Locale) => void;
 }
 
 const navLinks = [
@@ -25,7 +25,7 @@ const localeLabels: Record<Locale, string> = {
   ka: "KA",
 };
 
-export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
+export default function Navbar({ locale }: NavbarProps) {
   const t = createT(locale);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -62,15 +62,15 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
     >
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
         {/* Left: Property name */}
-        <a
-          href="#"
+        <Link
+          href={`/${locale}`}
           className={cn(
             "text-sm font-medium tracking-wide transition-colors",
             scrolled ? "text-stone-800" : "text-white"
           )}
         >
           {siteConfig.propertyName}
-        </a>
+        </Link>
 
         {/* Center: Desktop nav links */}
         <ul className="hidden items-center gap-8 md:flex">
@@ -94,9 +94,9 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
           {/* Desktop language switcher */}
           <div className="hidden items-center gap-1 md:flex">
             {siteConfig.locales.map((loc) => (
-              <button
+              <Link
                 key={loc}
-                onClick={() => onLocaleChange(loc)}
+                href={`/${loc}`}
                 className={cn(
                   "rounded-lg px-2.5 py-1 text-xs font-semibold transition-all",
                   locale === loc
@@ -109,7 +109,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
                 )}
               >
                 {localeLabels[loc]}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -179,12 +179,10 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
               {/* Language switcher */}
               <div className="mt-4 flex items-center gap-2 border-t border-stone-200 pt-4">
                 {siteConfig.locales.map((loc) => (
-                  <button
+                  <Link
                     key={loc}
-                    onClick={() => {
-                      onLocaleChange(loc);
-                      closeMobile();
-                    }}
+                    href={`/${loc}`}
+                    onClick={closeMobile}
                     className={cn(
                       "rounded-lg px-3 py-1.5 text-xs font-semibold transition-all",
                       locale === loc
@@ -193,7 +191,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
                     )}
                   >
                     {localeLabels[loc]}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -1,6 +1,9 @@
-import { siteConfig } from "@/site-config";
+import { siteConfig, type Locale } from "@/site-config";
+import { getArray } from "@/lib/i18n";
 
-export default function JsonLd() {
+export default function JsonLd({ locale }: { locale: Locale }) {
+  const faqItems = getArray(locale, "faq.items") as { q: string; a: string }[];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "VacationRental",
@@ -43,48 +46,14 @@ export default function JsonLd() {
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What time is check-in and check-out?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Check-in from 14:00, check-out by 11:00. Flexible timing can be arranged if the apartment is free.",
-        },
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
       },
-      {
-        "@type": "Question",
-        name: "Is it cold at night in summer?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Evenings drop to 8–12°C. The apartment has central heating and extra blankets. Bring a light jacket for outside.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Where can I buy groceries?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "There are small shops in Gudauri village. For a bigger selection, stop at a supermarket in Pasanauri or Tbilisi on the way up.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How do I get the keys?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We use a key lockbox for self check-in. You'll receive the code and detailed instructions by email before arrival.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is parking available?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, free parking is available right at the building. No reservation needed.",
-        },
-      },
-    ],
+    })),
   };
 
   return (
